@@ -4,10 +4,35 @@ using UnityEngine.UIElements;
 
 #region UIKit 접근자들
 /*
+ * UI Document 컴포넌트 가져와서 할당
+ *  var root = GetComponent<UIDocument>().rootVisualElement;
+ * 
+ * --------------------------------------------------------------------------------------
+ * 
+ * 버튼
+ * 특정 버튼의 클릭 감지
+ * // Q는 Query...을 축약한거. 자세한건 구글 검색 ㄱㄱ
+ *  root.Q<Button>("Dart-Button").clicked += () => {실행코드}
+ * 
+ * 마우스 포인터가 특정 UI위에 올라왔는지 감지
+ *  root.Q<Button>("Dart-Button").RegisterCallback<PointerEnterEvent>(_ => {실행코드});
+ *  
+ * 마우스 포인터가 특정 UI위에서 벗어났는지 감지
+ *  root.Q<Button>("Dart-Button").RegisterCallback<PointerLeaveEvent>(_ => {실행코드});
+ * 
+ * --------------------------------------------------------------------------------------
+ * 
  * 이미지
+ * 특정 이미지를 할당
+ *  image = root.Q<Image>("Tower-Manu");
+ * 
  * 이미지의 Inlined Styles의 Display의 Display 값 접근
- * image.style.display = DisplayStyle.Flex; //가시화
- * image.style.display = DisplayStyle.None; //비가시화
+ *  image.style.display = DisplayStyle.Flex; //가시화
+ *  image.style.display = DisplayStyle.None; //비가시화
+ *  
+ * --------------------------------------------------------------------------------------
+ * 
+ * 
 */
 #endregion
 
@@ -29,7 +54,6 @@ public class GameManager : MonoBehaviour
         image = root.Q<Image>("Tower-Manu");
 
         #region Dart
-        // Q는 Query...을 축약한거
         root.Q<Button>("Dart-Button").clicked += () =>
         {
             Debug.Log("Dart-Button이 클릭되었습니다.");
