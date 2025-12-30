@@ -1,0 +1,35 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/UI_Base.uss?fileID=7433441132597879392&amp;guid=65e36bf852c6aae40bddc3320c3eb041&amp;type=3#UI_Base"/>
+    <ui:VisualElement name="VisualElement" style="flex-grow: initial; align-self: flex-end; align-content: center; align-items: stretch; width: 19%; height: 100%; left: -240px;">
+        <ui:Image source="project://database/Assets/@Resources/Bloon_Defense_Side_Menu.png?fileID=2800000&amp;guid=b33714bf9166f434fbdd08f00e01a585&amp;type=3#Bloon_Defense_Side_Menu" scale-mode="StretchToFill" style="height: 998px; margin-top: 10px;">
+            <ui:Label text="Label" name="Round" style="align-self: flex-end; width: 160px; height: 44px; margin-top: 24px; -unity-text-align: middle-right; font-size: 35px;">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="Round" data-source="project://database/Assets/@Scripts/UI/UI_Base.asset?fileID=11400000&amp;guid=86f1fd99c34bb3e4389fa36a9a5062b6&amp;type=2#UI_Base" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:Label>
+            <ui:Label text="Label" name="Money" style="align-self: flex-end; width: 160px; height: 44px; margin-top: 10px; -unity-text-align: middle-right; font-size: 35px;">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source="project://database/Assets/@Scripts/UI/UI_Base.asset?fileID=11400000&amp;guid=86f1fd99c34bb3e4389fa36a9a5062b6&amp;type=2#UI_Base" binding-mode="ToTarget" data-source-path="Money"/>
+                </Bindings>
+            </ui:Label>
+            <ui:Label text="Label" name="Lives" style="align-self: flex-end; width: 160px; height: 44px; margin-top: 5px; -unity-text-align: middle-right; font-size: 35px;">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source="project://database/Assets/@Scripts/UI/UI_Base.asset?fileID=11400000&amp;guid=86f1fd99c34bb3e4389fa36a9a5062b6&amp;type=2#UI_Base" binding-mode="ToTarget" data-source-path="Lives"/>
+                </Bindings>
+            </ui:Label>
+            <ui:VisualElement name="Tower-Buttons" style="flex-grow: initial; height: 160px; flex-direction: row;">
+                <ui:Button text="Button" name="Dart-Button" class="Tower-Button" style="-unity-text-align: middle-center; align-self: flex-start; align-content: center; translate: 12px 0;"/>
+                <ui:Button text="Button" name="Tack-Button" class="Tower-Button" style="-unity-text-align: middle-center; align-self: flex-start; align-content: center; translate: 24px 0;"/>
+                <ui:Button text="Button" name="Ice-Button" class="Tower-Button" style="-unity-text-align: middle-center; align-self: flex-start; align-content: center; translate: 36px 0;"/>
+                <ui:Button text="Button" name="Bomb-Button" class="Tower-Button" style="-unity-text-align: middle-center; align-self: flex-start; align-content: center; translate: 48px 0;"/>
+                <ui:Button text="Button" name="Super-Button" class="Tower-Button" style="-unity-text-align: middle-center; align-self: flex-start; align-content: center; translate: 60px 0;"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="Tower-Description" enabled="true" style="flex-grow: 1; opacity: 1; display: flex;">
+                <ui:Image source="" scale-mode="StretchToFill" name="Tower-Manu" style="align-self: auto; height: 100%; width: 100%; margin-left: 0; margin-right: 0; padding-left: 10px; padding-right: 10px; display: flex; overflow: visible; visibility: visible;"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="Start-Button" style="flex-grow: initial; height: 120px;">
+                <ui:Button text="Start Round" style="align-self: auto; align-content: flex-start; height: 95%; font-size: 54px; background-color: rgb(94, 219, 38); padding-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 4px; margin-bottom: 0; margin-top: 2px; background-size: 100% 100%; -unity-background-image-tint-color: rgb(255, 255, 255);"/>
+            </ui:VisualElement>
+        </ui:Image>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,24 @@
+:root {
+}
+
+.Tower-Button {
+    width: 50px;
+    align-self: center;
+    align-content: center;
+    justify-content: flex-start;
+    height: 50px;
+    top: 87px;
+    right: auto;
+    left: 4px;
+    opacity: 1;
+    display: flex;
+    visibility: visible;
+}
+
+.Tower-Button:hover {
+    visibility: visible;
+    display: flex;
+}
+
+.Tower-Button:active {
+}
