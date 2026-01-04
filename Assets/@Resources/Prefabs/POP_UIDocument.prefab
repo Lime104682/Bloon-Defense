@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5546262896962674570
+--- !u!1 &4224198771942806359
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1314038419937334489}
-  - component: {fileID: 1704510048266936426}
-  - component: {fileID: 6265142388595697045}
+  - component: {fileID: 4616350098934097875}
+  - component: {fileID: 2153422532107753186}
+  - component: {fileID: 8160943177635692432}
   m_Layer: 5
-  m_Name: UIDocument
+  m_Name: POP_UIDocument
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1314038419937334489
+--- !u!4 &4616350098934097875
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5546262896962674570}
+  m_GameObject: {fileID: 4224198771942806359}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -33,13 +33,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1704510048266936426
+--- !u!114 &2153422532107753186
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5546262896962674570}
+  m_GameObject: {fileID: 4224198771942806359}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
   m_PanelSettings: {fileID: 11400000, guid: 685f0d26fbd637e4d9e92afd6804ac5b, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: 3f6d14714bacba9439b246bb03135b0e, type: 3}
+  sourceAsset: {fileID: 9197481963319205126, guid: f63e99bf7caedb4499acea05a264ddff, type: 3}
   m_SortingOrder: 0
   m_Position: 0
   m_WorldSpaceSizeMode: 1
@@ -56,21 +56,16 @@ MonoBehaviour:
   m_PivotReferenceSize: 0
   m_Pivot: 0
   m_WorldSpaceCollider: {fileID: 0}
---- !u!114 &6265142388595697045
+--- !u!114 &8160943177635692432
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5546262896962674570}
+  m_GameObject: {fileID: 4224198771942806359}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 924fee2054908134792acf5c7b480bc6, type: 3}
+  m_Script: {fileID: 11500000, guid: 54171c5a3fb00e648b507bd23262ddc0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  DartButton_ishover: 0
-  Dart_Tower_texture: {fileID: 2800000, guid: cfe8639a5d055954a92fc7b41ddd4904, type: 3}
-  Task_Tower_texture: {fileID: 2800000, guid: d07389082143a8f4ebc9a89c5c2e4e5c, type: 3}
-  Ice_Tower_texture: {fileID: 2800000, guid: c34026dbfcadbc8459c8bd6032effe47, type: 3}
-  Bomb_Tower_texture: {fileID: 2800000, guid: 03fa87fd8d134eb40936a66c88c6b7fd, type: 3}
-  Super_Tower_texture: {fileID: 2800000, guid: 324e9a75984aa5c48b2e0bbcc0f74447, type: 3}
+  m_EditorClassIdentifier: Assembly-CSharp::POP_UI
+  ui_dataSO: {fileID: 11400000, guid: 86f1fd99c34bb3e4389fa36a9a5062b6, type: 2}

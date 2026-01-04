@@ -38,111 +38,132 @@ using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
-    public bool DartButton_ishover = false;
+    [SerializeField]
+    private UI_Base ui_dataSO;
+
+    private bool DartButton_ishover = false;
     
     private Image image;
+    private Button start_button;
+    private Button dart_button;
+    private Button tack_button;
+    private Button ice_button;
+    private Button bomb_button;
+    private Button super_button;
+
+
     public Texture2D Dart_Tower_texture;
     public Texture2D Task_Tower_texture;
     public Texture2D Ice_Tower_texture;
     public Texture2D Bomb_Tower_texture;
     public Texture2D Super_Tower_texture;
 
+    private void Awake()
+    {
+        //초기화
+        var root = GetComponent<UIDocument>().rootVisualElement;
+        image = root.Q<Image>("Tower-Manu");
+        start_button = root.Q<Button>("Start-Button");
+        dart_button = root.Q<Button>("Dart-Button");
+        tack_button = root.Q<Button>("Tack-Button");
+        ice_button = root.Q<Button>("Ice-Button");
+        bomb_button = root.Q<Button>("Bomb-Button");
+        super_button = root.Q<Button>("Super-Button");
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        var root = GetComponent<UIDocument>().rootVisualElement;
-        image = root.Q<Image>("Tower-Manu");
-
         #region Dart
-        root.Q<Button>("Dart-Button").clicked += () =>
+        dart_button.clicked += () =>
         {
             Debug.Log("Dart-Button이 클릭되었습니다.");
         };
 
-        root.Q<Button>("Dart-Button").RegisterCallback<PointerEnterEvent>(_ =>
+        dart_button.RegisterCallback<PointerEnterEvent>(_ =>
         {
             DartButton_ishover = true;
             Debug.Log("Dart 타워 버튼 위에 마스가 올라갔습니다.");
             image.image = Dart_Tower_texture;
         });
 
-        root.Q<Button>("Dart-Button").RegisterCallback<PointerLeaveEvent>(_ =>
+        dart_button.RegisterCallback<PointerLeaveEvent>(_ =>
         {
             DartButton_ishover = false;
             image.image = null;
         });
         #endregion
         #region Tack
-        root.Q<Button>("Tack-Button").clicked += () =>
+        tack_button.clicked += () =>
         {
             Debug.Log("Tack-Button이 클릭되었습니다.");
         };
 
-        root.Q<Button>("Tack-Button").RegisterCallback<PointerEnterEvent>(_ =>
+        tack_button.RegisterCallback<PointerEnterEvent>(_ =>
         {
             DartButton_ishover = true;
             Debug.Log("Tack 타워 버튼 위에 마스가 올라갔습니다.");
             image.image = Task_Tower_texture;
         });
 
-        root.Q<Button>("Tack-Button").RegisterCallback<PointerLeaveEvent>(_ =>
+        tack_button.RegisterCallback<PointerLeaveEvent>(_ =>
         {
             DartButton_ishover = false;
             image.image = null; 
         });
         #endregion
         #region Ice
-        root.Q<Button>("Ice-Button").clicked += () =>
+        ice_button.clicked += () =>
         {
             Debug.Log("Ice-Button이 클릭되었습니다.");
         };
 
-        root.Q<Button>("Ice-Button").RegisterCallback<PointerEnterEvent>(_ =>
+        ice_button.RegisterCallback<PointerEnterEvent>(_ =>
         {
             DartButton_ishover = true;
             Debug.Log("Ice 타워 버튼 위에 마스가 올라갔습니다.");
             image.image = Ice_Tower_texture;
         });
 
-        root.Q<Button>("Ice-Button").RegisterCallback<PointerLeaveEvent>(_ =>
+        ice_button.RegisterCallback<PointerLeaveEvent>(_ =>
         {
             DartButton_ishover = false;
             image.image = null;
         });
         #endregion
         #region Bomb
-        root.Q<Button>("Bomb-Button").clicked += () =>
+        bomb_button.clicked += () =>
         {
             Debug.Log("Bomb-Button이 클릭되었습니다.");
         };
 
-        root.Q<Button>("Bomb-Button").RegisterCallback<PointerEnterEvent>(_ =>
+        bomb_button.RegisterCallback<PointerEnterEvent>(_ =>
         {
             DartButton_ishover = true;
             Debug.Log("Bomb 타워 버튼 위에 마스가 올라갔습니다.");
             image.image = Bomb_Tower_texture;
         });
 
-        root.Q<Button>("Bomb-Button").RegisterCallback<PointerLeaveEvent>(_ =>
+        bomb_button.RegisterCallback<PointerLeaveEvent>(_ =>
         {
             DartButton_ishover = false;
             image.image = null;
         });
         #endregion
         #region Super
-        root.Q<Button>("Super-Button").clicked += () =>
+        super_button.clicked += () =>
         {
             Debug.Log("Super-Button이 클릭되었습니다.");
         };
 
-        root.Q<Button>("Super-Button").RegisterCallback<PointerEnterEvent>(_ =>
+        super_button.RegisterCallback<PointerEnterEvent>(_ =>
         {
             DartButton_ishover = true;
             Debug.Log("Super 타워 버튼 위에 마스가 올라갔습니다.");
             image.image = Super_Tower_texture;
         });
 
-        root.Q<Button>("Super-Button").RegisterCallback<PointerLeaveEvent>(_ =>
+        super_button.RegisterCallback<PointerLeaveEvent>(_ =>
         {
             DartButton_ishover = false;
             image.image = null;
@@ -150,9 +171,20 @@ public class GameManager : MonoBehaviour
         #endregion
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
+        ui_dataSO.OnNewGameChanged += OnNewGameChanged;
+    }
+
+    private void OnDisable()
+    {
+        ui_dataSO.OnNewGameChanged -= OnNewGameChanged;
+    }
+
+    private void OnNewGameChanged(bool isNewGame)
+    {
+        start_button.style.display =
+        isNewGame ? DisplayStyle.Flex : DisplayStyle.None;
     }
 
 

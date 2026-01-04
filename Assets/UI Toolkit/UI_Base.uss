@@ -18,6 +18,7 @@
 .Tower-Button:hover {
     visibility: visible;
     display: flex;
+    
 }
 
 .Tower-Button:active {
