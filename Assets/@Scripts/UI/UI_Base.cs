@@ -1,6 +1,44 @@
 using System;
 using UnityEngine;
 
+/*
+ * using UnityEngine;
+ * using UnityEngine.UIElements;
+ *
+ *  public class UITKBinder : MonoBehaviour
+ *  {
+ *      public TestSO testSO;
+ *
+ *      void OnEnable()
+        {
+            var root = GetComponent<UIDocument>().rootVisualElement;
+
+            // SerializedObject 생성
+            SerializedObject so = new SerializedObject(testSO);
+
+            // 전체 바인딩
+            root.Bind(so);
+
+            // 버튼
+            var button = root.Q<Button>("EnableButton");
+
+            button.clicked += () =>
+            {
+                var prop = so.FindProperty("isEnabled");
+                prop.boolValue = true;
+                so.ApplyModifiedProperties();
+            };
+        }
+    }
+
+ */
+
+/*TODO
+ * 여기서 최소한의 로직으로 
+ * Lives가 0이라면 게임오버 체크하기
+ * -> 그럼 게임오버를 구독하고 있던 PopUI.cs에서 게임오버 UI를 띄움
+ */
+
 [CreateAssetMenu(fileName = "UI_Base", menuName = "Scriptable Objects/UI_Base")]
 public class UI_Base : ScriptableObject
 {

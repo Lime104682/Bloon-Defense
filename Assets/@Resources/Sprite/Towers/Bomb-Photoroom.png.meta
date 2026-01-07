@@ -116,10 +116,10 @@ TextureImporter:
       name: Bomb-Photoroom_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 3
-        width: 30
-        height: 45
+        x: 11
+        y: 6
+        width: 28
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
