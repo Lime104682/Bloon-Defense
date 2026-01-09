@@ -13,8 +13,8 @@ public enum BloonGrade
     Blue,
     Green,
     Yellow,
-    Pink,
-    Black
+    Black,
+    White
 }
 
 [System.Serializable]
@@ -66,12 +66,12 @@ public class RoundManager : MonoBehaviour
 
     private void OnEnable()
     {
-        Move_Bloon.OnBloonDead += HandleBloonDead;
+        BloonManager.OnBloonDead += HandleBloonDead;
     }
 
     private void OnDisable()
     {
-        Move_Bloon.OnBloonDead -= HandleBloonDead;
+        BloonManager.OnBloonDead -= HandleBloonDead;
     }
 
     private void Awake()
@@ -161,7 +161,7 @@ public class RoundManager : MonoBehaviour
         _aliveBloonCount++;
     }
 
-    private void HandleBloonDead(Move_Bloon bloon)
+    private void HandleBloonDead(BloonManager bloon)
     {
         _aliveBloonCount--;
         CheckRoundEnd();

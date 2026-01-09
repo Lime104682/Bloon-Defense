@@ -1509,14 +1509,30 @@ MonoBehaviour:
   - Round: 1
     Bloons:
     - Grade: 0
-      Count: 30
-  - Round: 2
-    Bloons:
-    - Grade: 0
-      Count: 50
+      Count: 5
+    - Grade: 1
+      Count: 5
+    - Grade: 2
+      Count: 5
+    - Grade: 3
+      Count: 5
+    - Grade: 4
+      Count: 5
+    - Grade: 5
+      Count: 5
   BloonPrefabs:
   - Grade: 0
     Prefab: {fileID: 3465756565183857514, guid: f1b11590d6d10eb4c815e88092eaf910, type: 3}
+  - Grade: 1
+    Prefab: {fileID: 5059652287238373794, guid: 459ff83534fd737419c1467a754c8f23, type: 3}
+  - Grade: 2
+    Prefab: {fileID: 1825750976296582885, guid: 525939fb253d9844bb0f980bbef1e4e4, type: 3}
+  - Grade: 3
+    Prefab: {fileID: 5592121536337520012, guid: dddf1eeffefb5a84b8078b2da3b43e46, type: 3}
+  - Grade: 4
+    Prefab: {fileID: 5576888564699515844, guid: d6315a269ebe992469c615fac80b4da7, type: 3}
+  - Grade: 5
+    Prefab: {fileID: 7382767302166620514, guid: 205015be82edcc74899a0f2f5e598fab, type: 3}
   SpawnPoint: {fileID: 1449221146}
   SpawnInterval: 0.3
 --- !u!4 &792682605
@@ -1751,7 +1767,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &975285923
 Transform:
   m_ObjectHideFlags: 0

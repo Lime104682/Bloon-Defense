@@ -15,34 +15,13 @@ MonoBehaviour:
   m_GroupName: UI
   m_GUID: a8ca5d5217ffa394188bc4bf0c70d4e2
   m_SerializeEntries:
-  - m_GUID: 03fa87fd8d134eb40936a66c88c6b7fd
-    m_Address: BombTower_Menu.png
+  - m_GUID: 734a4526b324a224fbce09c643a699f2
+    m_Address: POP_UIDocument.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 324e9a75984aa5c48b2e0bbcc0f74447
-    m_Address: SuperMonkey_Menu.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c3089bf27f9b14249a6b8a392f9ff66f
-    m_Address: Start_Boutton.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c34026dbfcadbc8459c8bd6032effe47
-    m_Address: IceTower_Menu.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: cfe8639a5d055954a92fc7b41ddd4904
-    m_Address: DartTower_Menu.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - default
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d07389082143a8f4ebc9a89c5c2e4e5c
-    m_Address: TackTower_Menu.png
+  - m_GUID: d96a200a62f32b84589c0b08f608c6b7
+    m_Address: Side_UIDocument.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

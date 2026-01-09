@@ -33,27 +33,12 @@ using UnityEngine;
  * 
  */
 
-public class Move_Bloon : MonoBehaviour
+public class Move_Bloon : BloonManager
 {
-    [Header("Path")]
-    [SerializeField] 
     private Transform pathParent;
-    [SerializeField] 
-    private float moveSpeed = 0.1f;
 
     private List<Transform> waypoints = new List<Transform>();
     private int curindex = 0;
-
-    public static event Action<Move_Bloon> OnBloonDead;
-
-    public int maxHP = 1;
-    public int curHP;
-
-
-    private void OnEnable()
-    {
-        curHP = maxHP;
-    }
 
     void Start()
     {
@@ -97,7 +82,7 @@ public class Move_Bloon : MonoBehaviour
         transform.position = Vector3.MoveTowards(
             transform.position,
             target.position,
-            moveSpeed * Time.fixedDeltaTime
+            base.moveSpeed * Time.fixedDeltaTime
         );
 
         // 목표 지점 도착 체크
@@ -113,26 +98,9 @@ public class Move_Bloon : MonoBehaviour
         }
     }
 
-    public void Hit()
-    {
-        curHP--;
-
-        if (curHP <= 0)
-        {
-            Die();
-        }
-    }
-
     void ReachGoal()
     {
         // TODO: 라이프 감소
-        Die();
-    }
-
-    private void Die()
-    {
-        Destroy(gameObject);
-        OnBloonDead?.Invoke(this);
-
+        base.Die();
     }
 }

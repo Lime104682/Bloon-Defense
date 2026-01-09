@@ -14,7 +14,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: Prefab
   m_GUID: 2d5734e946deffb4f9cc00248599b6eb
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 205015be82edcc74899a0f2f5e598fab
+    m_Address: WhiteBloon.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 459ff83534fd737419c1467a754c8f23
+    m_Address: BlueBloon.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 525939fb253d9844bb0f980bbef1e4e4
+    m_Address: GreenBloon.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cb2865f7e6f4ea0428a03a3d64ba55c1
+    m_Address: Projective.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d6315a269ebe992469c615fac80b4da7
+    m_Address: BlackBloon.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dddf1eeffefb5a84b8078b2da3b43e46
+    m_Address: YellowBloon.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f1b11590d6d10eb4c815e88092eaf910
+    m_Address: RedBloon.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 58aa56c3c8bef9b4db88674c3ec3ca50, type: 2}
   m_SchemaSet:
