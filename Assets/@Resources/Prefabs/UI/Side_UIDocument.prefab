@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 924fee2054908134792acf5c7b480bc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  DartButton_ishover: 0
+  _uiButtonDataSO: {fileID: 11400000, guid: d75eec88e7283fc49b8fe7f8ed68f48a, type: 2}
   Dart_Tower_texture: {fileID: 2800000, guid: cfe8639a5d055954a92fc7b41ddd4904, type: 3}
   Task_Tower_texture: {fileID: 2800000, guid: d07389082143a8f4ebc9a89c5c2e4e5c, type: 3}
   Ice_Tower_texture: {fileID: 2800000, guid: c34026dbfcadbc8459c8bd6032effe47, type: 3}

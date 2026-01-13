@@ -9,15 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95e165f7876ffc24f9d5a3f4bb1b4062, type: 3}
-  m_Name: UI_Base
-  m_EditorClassIdentifier: Assembly-CSharp::UI_Base
+  m_Script: {fileID: 11500000, guid: 8c9ad8677e12cbf49afbabdf798bd535, type: 3}
+  m_Name: SideUITK_VM
+  m_EditorClassIdentifier: Assembly-CSharp::SideUITK_VM
   Round: 1
   Money: 650
   Lives: 40
   Cost: 0
   Speed: 
-  Tower_Description: 
   Skill01_Price: 0
   Skill02_Price: 0
   Range: 0

@@ -3,10 +3,12 @@ using UnityEngine.UIElements;
 using static UnityEngine.Analytics.IAnalytic;
 using static UnityEngine.Rendering.DebugUI.MessageBox;
 
+
+//POP_UIDocument.prefab 스크립트
 public class POP_UI : MonoBehaviour
 {
     [SerializeField]
-    private UI_Base ui_dataSO;
+    private ButtonVM _uiButtonDataSO;
 
     private VisualElement _startVE;
     private VisualElement _clearVE;
@@ -40,6 +42,5 @@ public class POP_UI : MonoBehaviour
         _startVE.parent.style.display = DisplayStyle.None;
 
         //NEW GAME 버튼 클릭 감지
-        ui_dataSO.SetNewGame(true);
     }
 }

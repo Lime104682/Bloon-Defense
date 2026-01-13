@@ -170,4 +170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a829ee1f51dbb46867fef484c05b96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Move_Bloon
+  maxHP: 5
+  bloontype: 5
   moveSpeed: 0.27

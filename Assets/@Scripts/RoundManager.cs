@@ -1,9 +1,7 @@
 using Data;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 #region Data
 
@@ -18,20 +16,6 @@ public enum BloonGrade
 }
 
 [System.Serializable]
-public class BloonSpawnData
-{
-    public BloonGrade Grade;
-    public int Count;
-}
-
-[System.Serializable]
-public class RoundData
-{
-    public int Round;
-    public List<BloonSpawnData> Bloons;
-}
-
-[System.Serializable]
 public class BloonPrefabEntry
 {
     public BloonGrade Grade;
@@ -42,41 +26,53 @@ public class BloonPrefabEntry
 
 public class RoundManager : MonoBehaviour
 {
-    [Header("Round Data")]
-    public List<RoundData> Rounds;
+    
 
     [Header("Bloon Prefabs")]
-    public List<BloonPrefabEntry> BloonPrefabs;
+    public List<BloonPrefabEntry> BloonPrefabs 
+        = new List<BloonPrefabEntry>();
 
     [Header("Spawn Settings")]
     public Transform SpawnPoint;
     public float SpawnInterval = 0.1f;
+    
+    private Dictionary<int, Data.RoundData> _roundDic 
+        = new Dictionary<int, Data.RoundData>();
 
-    private Dictionary<BloonGrade, GameObject> _prefabDict;
+    private Dictionary<BloonGrade, GameObject> _prefabDict 
+        = new Dictionary<BloonGrade, GameObject>();
 
     private int _currentRoundIndex = 0;
     private int _aliveBloonCount;
 
-    private Coroutine _spawnCoroutine;
-
     private bool _roundActive;
     private bool _isSpawning;
+    private bool _isStartRoundBT;
+
+    private Coroutine _spawnCoroutine;
 
     #region Unity LifeCycle
 
     private void OnEnable()
     {
         BloonManager.OnBloonDead += HandleBloonDead;
+        ButtonVM.OnstartRoundButton += _startRoundAction;
     }
 
     private void OnDisable()
     {
         BloonManager.OnBloonDead -= HandleBloonDead;
+        ButtonVM.OnstartRoundButton -= _startRoundAction;
     }
 
-    private void Awake()
+    private void Start()
     {
-        _prefabDict = new Dictionary<BloonGrade, GameObject>();
+        _roundDic = Managers.Data.RoundDic;
+
+        Debug.Log($"RoundDic Count = {_roundDic.Count}");
+
+        foreach (var kv in _roundDic)
+            Debug.Log($"Round Key = {kv.Key}");
 
         foreach (var entry in BloonPrefabs)
         {
@@ -87,14 +83,7 @@ public class RoundManager : MonoBehaviour
 
     private void Update()
     {
-        /*옛날거라 6에선 사용 못함
-        if (!_roundActive && Input.GetKeyDown(KeyCode.Space))
-        {
-           StartRound();
-        }
-        */
-
-        if (!_roundActive && Keyboard.current.spaceKey.wasPressedThisFrame)
+        if (!_roundActive && _isStartRoundBT)
         {
             StartRound();
         }
@@ -106,7 +95,9 @@ public class RoundManager : MonoBehaviour
 
     public void StartRound()
     {
-        if (_currentRoundIndex >= Rounds.Count)
+        int nextRound = _currentRoundIndex + 1;
+
+        if (!_roundDic.ContainsKey(nextRound))
         {
             Debug.Log("모든 라운드 종료");
             return;
@@ -116,6 +107,7 @@ public class RoundManager : MonoBehaviour
 
         _aliveBloonCount = 0;
         _roundActive = true;
+        _isStartRoundBT = false;
 
         if (_spawnCoroutine != null)
             StopCoroutine(_spawnCoroutine);
@@ -131,20 +123,21 @@ public class RoundManager : MonoBehaviour
     {
         _isSpawning = true;
 
-        RoundData round = Rounds[_currentRoundIndex];
+        int roundIndex = _currentRoundIndex + 1;
+        var round = _roundDic[roundIndex];
 
-        foreach (var spawnData in round.Bloons)
+        foreach (var wave in round.waves)
         {
-            for (int i = 0; i < spawnData.Count; i++)
+            for (int i = 0; i < wave.count; i++)
             {
-                SpawnBloon(spawnData.Grade);
+                SpawnBloon((BloonGrade)System.Enum.Parse(typeof(BloonGrade), wave.type));
                 yield return new WaitForSeconds(SpawnInterval);
             }
         }
 
         _isSpawning = false;
 
-        Debug.Log($"Round {round.Round} 스폰 완료");
+        Debug.Log($"Round {_currentRoundIndex + 1} 스폰 완료");
 
         CheckRoundEnd();
     }
@@ -165,6 +158,11 @@ public class RoundManager : MonoBehaviour
     {
         _aliveBloonCount--;
         CheckRoundEnd();
+    }
+
+    private void _startRoundAction()
+    {
+        _isStartRoundBT = true;
     }
 
     private void CheckRoundEnd()

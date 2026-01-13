@@ -4,17 +4,17 @@
         <ui:Image source="project://database/Assets/@Resources/Sprite/UI/Bloon_Defense_Side_Menu.png?fileID=2800000&amp;guid=b33714bf9166f434fbdd08f00e01a585&amp;type=3#Bloon_Defense_Side_Menu" scale-mode="StretchToFill" name="UI_Base-Image" style="height: 998px; margin-top: 10px;">
             <ui:Label text="Label" name="Round" style="align-self: flex-end; width: 160px; height: 44px; margin-top: 24px; -unity-text-align: middle-right; font-size: 35px;">
                 <Bindings>
-                    <ui:DataBinding property="text" data-source-path="Round" data-source="project://database/Assets/@Scripts/UI/UI_Base.asset?fileID=11400000&amp;guid=86f1fd99c34bb3e4389fa36a9a5062b6&amp;type=2#UI_Base" binding-mode="ToTarget"/>
+                    <ui:DataBinding property="text" data-source="project://database/Assets/@Scripts/ViewModels/SideUITK_VM.asset?fileID=11400000&amp;guid=5618d4c2b00576f408c50a96933eae3d&amp;type=2#SideUITK_VM" binding-mode="ToTarget" data-source-path="Round"/>
                 </Bindings>
             </ui:Label>
             <ui:Label text="Label" name="Money" style="align-self: flex-end; width: 160px; height: 44px; margin-top: 10px; -unity-text-align: middle-right; font-size: 35px;">
                 <Bindings>
-                    <ui:DataBinding property="text" data-source="project://database/Assets/@Scripts/UI/UI_Base.asset?fileID=11400000&amp;guid=86f1fd99c34bb3e4389fa36a9a5062b6&amp;type=2#UI_Base" binding-mode="ToTarget" data-source-path="Money"/>
+                    <ui:DataBinding property="text" data-source="project://database/Assets/@Scripts/ViewModels/SideUITK_VM.asset?fileID=11400000&amp;guid=5618d4c2b00576f408c50a96933eae3d&amp;type=2#SideUITK_VM" binding-mode="ToTarget" data-source-path="Money"/>
                 </Bindings>
             </ui:Label>
             <ui:Label text="Label" name="Lives" style="align-self: flex-end; width: 160px; height: 44px; margin-top: 5px; -unity-text-align: middle-right; font-size: 35px;">
                 <Bindings>
-                    <ui:DataBinding property="text" data-source="project://database/Assets/@Scripts/UI/UI_Base.asset?fileID=11400000&amp;guid=86f1fd99c34bb3e4389fa36a9a5062b6&amp;type=2#UI_Base" binding-mode="ToTarget" data-source-path="Lives"/>
+                    <ui:DataBinding property="text" data-source="project://database/Assets/@Scripts/ViewModels/SideUITK_VM.asset?fileID=11400000&amp;guid=5618d4c2b00576f408c50a96933eae3d&amp;type=2#SideUITK_VM" binding-mode="ToTarget" data-source-path="Lives"/>
                 </Bindings>
             </ui:Label>
             <ui:VisualElement name="Tower-Buttons" style="flex-grow: initial; height: 160px; flex-direction: row;">
@@ -25,10 +25,10 @@
                 <ui:Button text="Button" name="Super-Button" class="Tower-Button" style="-unity-text-align: middle-center; align-self: flex-start; align-content: center; translate: 60px 0;"/>
             </ui:VisualElement>
             <ui:VisualElement name="Tower-Description" enabled="true" style="flex-grow: 1; opacity: 1; display: flex;">
-                <ui:Image source="" scale-mode="StretchToFill" name="Tower-Manu" style="align-self: auto; height: 100%; width: 100%; margin-left: 0; margin-right: 0; padding-left: 10px; padding-right: 10px; display: flex; overflow: visible; visibility: visible;"/>
+                <ui:Image source="project://database/Assets/@Resources/Sprite/UI/BombTower_Menu.png?fileID=2800000&amp;guid=03fa87fd8d134eb40936a66c88c6b7fd&amp;type=3#BombTower_Menu" scale-mode="StretchToFill" name="Tower-Manu" style="align-self: auto; height: 100%; width: 100%; margin-left: 0; margin-right: 0; padding-left: 10px; padding-right: 10px; display: flex; overflow: visible; visibility: visible;"/>
             </ui:VisualElement>
-            <ui:VisualElement name="Start-Button" style="flex-grow: initial; height: 120px; display: flex;">
-                <ui:Button text="Start Round" style="align-self: auto; align-content: flex-start; height: 95%; font-size: 54px; background-color: rgb(94, 219, 38); padding-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 4px; margin-bottom: 0; margin-top: 2px; background-size: 100% 100%; -unity-background-image-tint-color: rgb(255, 255, 255);"/>
+            <ui:VisualElement name="Start-ButtonVE" style="flex-grow: initial; height: 120px; display: flex;">
+                <ui:Button text="Start Round" name="Start-Button" style="align-self: auto; align-content: flex-start; height: 95%; font-size: 54px; background-color: rgb(94, 219, 38); padding-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 4px; margin-bottom: 0; margin-top: 2px; background-size: 100% 100%; -unity-background-image-tint-color: rgb(255, 255, 255);"/>
             </ui:VisualElement>
         </ui:Image>
         <ui:VisualElement name="Under-Buttons" style="flex-grow: 1; flex-direction: row;">
@@ -37,4 +37,10 @@
         </ui:VisualElement>
     </ui:VisualElement>
     <ui:Button name="Sound-Button" style="width: 30px; height: 30px; position: absolute; justify-content: flex-start; align-content: flex-start; bottom: 0; right: auto; left: 258px; background-color: rgba(188, 188, 188, 0); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;"/>
+    <ui:VisualElement name="VisualElement" focusable="false" picking-mode="Position" style="flex-grow: 1; position: absolute; width: 339px; height: 536px; left: auto; overflow: visible; right: 252px; bottom: 195px;">
+        <ui:Image name="Image" source="project://database/Assets/@Resources/Sprite/UI/Dart_Upgrade.png?fileID=2800000&amp;guid=7bd59cecd9b37d341a66f7d306ba303d&amp;type=3#Dart_Upgrade" scale-mode="StretchToFill" style="width: 100%; height: 100%;"/>
+        <ui:Button text="" name="Skill1-Button" style="position: absolute; bottom: 70px; left: 0; width: 160px; height: 320px; background-color: rgba(188, 188, 188, 0.51);"/>
+        <ui:Button text="" name="Skill2-Button" style="position: absolute; bottom: 70px; left: auto; width: 160px; height: 320px; background-color: rgba(188, 188, 188, 0.51); right: 0;"/>
+        <ui:Button text="" name="Skill2-Button" style="position: absolute; bottom: 6px; left: auto; width: 330px; height: 51px; background-color: rgba(188, 188, 188, 0.51); right: 0;"/>
+    </ui:VisualElement>
 </ui:UXML>

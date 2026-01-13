@@ -40,8 +40,29 @@ public class Move_Bloon : BloonManager
     private List<Transform> waypoints = new List<Transform>();
     private int curindex = 0;
 
+    private bool _newSet = false;
+
+    public void SetSpawnState(Vector3 pos, int index)
+    {
+        transform.position = pos;
+        curindex = index;
+        _newSet = true;
+    }
+
+    public int GetCurrentIndex()
+    {
+        return curindex;
+    }
+
+    //public void SetCurrentIndex(int index)
+    //{
+    //    curindex = index;
+    //}
+
     void Start()
     {
+        base.Init();
+
         pathParent = GameObject.Find("Path").transform;
         
         if (pathParent == null)
@@ -56,14 +77,11 @@ public class Move_Bloon : BloonManager
             waypoints.Add(child);
         }
 
-        if (waypoints.Count < 0)
+        if (!_newSet)
         {
-            Debug.Log("waypoints 없음");
-            return;
+            //transform.position = waypoints[0].position;
+            curindex = 0;
         }
-
-        //시작 위치 지정
-        transform.position = waypoints[0].position;
 
     }
 

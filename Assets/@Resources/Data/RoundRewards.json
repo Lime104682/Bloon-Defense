@@ -1,0 +1,208 @@
+{
+  "roundRewards": [
+    {
+      "round": 1,
+      "message": "Money +100"
+    },
+    {
+      "round": 2,
+      "message": "Money +99"
+    },
+    {
+      "round": 3,
+      "message": "Money +98"
+    },
+    {
+      "round": 4,
+      "message": "Money +97"
+    },
+    {
+      "round": 5,
+      "message": "Money +96"
+    },
+    {
+      "round": 6,
+      "message": "Money +95"
+    },
+    {
+      "round": 7,
+      "message": "Money +94"
+    },
+    {
+      "round": 8,
+      "message": "Money +93"
+    },
+    {
+      "round": 9,
+      "message": "Money +92"
+    },
+    {
+      "round": 10,
+      "message": "Money +91"
+    },
+
+    {
+      "round": 11,
+      "message": "Money +90"
+    },
+    {
+      "round": 12,
+      "message": "Money +89"
+    },
+    {
+      "round": 13,
+      "message": "Money +88"
+    },
+    {
+      "round": 14,
+      "message": "Money +87"
+    },
+    {
+      "round": 15,
+      "message": "Money +86"
+    },
+    {
+      "round": 16,
+      "message": "Money +85"
+    },
+    {
+      "round": 17,
+      "message": "Money +84"
+    },
+    {
+      "round": 18,
+      "message": "Money +83"
+    },
+    {
+      "round": 19,
+      "message": "Money +82"
+    },
+    {
+      "round": 20,
+      "message": "Money +81"
+    },
+
+    {
+      "round": 21,
+      "message": "Money +80"
+    },
+    {
+      "round": 22,
+      "message": "Money +79"
+    },
+    {
+      "round": 23,
+      "message": "Money +78"
+    },
+    {
+      "round": 24,
+      "message": "Money +77"
+    },
+    {
+      "round": 25,
+      "message": "Money +76"
+    },
+    {
+      "round": 26,
+      "message": "Money +75"
+    },
+    {
+      "round": 27,
+      "message": "Money +74"
+    },
+    {
+      "round": 28,
+      "message": "Money +73"
+    },
+    {
+      "round": 29,
+      "message": "Money +72"
+    },
+    {
+      "round": 30,
+      "message": "Money +71"
+    },
+
+    {
+      "round": 31,
+      "message": "Money +70"
+    },
+    {
+      "round": 32,
+      "message": "Money +69"
+    },
+    {
+      "round": 33,
+      "message": "Money +68"
+    },
+    {
+      "round": 34,
+      "message": "Money +67"
+    },
+    {
+      "round": 35,
+      "message": "Money +66"
+    },
+    {
+      "round": 36,
+      "message": "Money +65"
+    },
+    {
+      "round": 37,
+      "message": "Money +64"
+    },
+    {
+      "round": 38,
+      "message": "Money +63"
+    },
+    {
+      "round": 39,
+      "message": "Money +62"
+    },
+    {
+      "round": 40,
+      "message": "Money +61"
+    },
+
+    {
+      "round": 41,
+      "message": "Money +60"
+    },
+    {
+      "round": 42,
+      "message": "Money +59"
+    },
+    {
+      "round": 43,
+      "message": "Money +58"
+    },
+    {
+      "round": 44,
+      "message": "Money +57"
+    },
+    {
+      "round": 45,
+      "message": "Money +56"
+    },
+    {
+      "round": 46,
+      "message": "Money +55"
+    },
+    {
+      "round": 47,
+      "message": "Money +54"
+    },
+    {
+      "round": 48,
+      "message": "Money +53"
+    },
+    {
+      "round": 49,
+      "message": "Money +52"
+    },
+    {
+      "round": 50,
+      "message": "Money +51"
+    }
+  ]
+}

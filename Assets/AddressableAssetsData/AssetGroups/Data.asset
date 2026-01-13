@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: UI
+  m_Name: Data
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
-  m_GroupName: UI
-  m_GUID: a8ca5d5217ffa394188bc4bf0c70d4e2
+  m_GroupName: Data
+  m_GUID: 7408f2205ce047b4f901447c8048bb65
   m_SerializeEntries:
-  - m_GUID: 734a4526b324a224fbce09c643a699f2
-    m_Address: POP_UIDocument.prefab
+  - m_GUID: 2732f702bc65d10488b6b802e2758ab0
+    m_Address: RoundData.json
     m_ReadOnly: 0
     m_SerializedLabels:
     - AllLoad
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d96a200a62f32b84589c0b08f608c6b7
-    m_Address: Side_UIDocument.prefab
+  - m_GUID: 38b2ae48e587ab34ab982082fae59261
+    m_Address: RoundRewards.json
     m_ReadOnly: 0
     m_SerializedLabels:
     - AllLoad
@@ -31,5 +31,5 @@ MonoBehaviour:
   m_Settings: {fileID: 11400000, guid: 58aa56c3c8bef9b4db88674c3ec3ca50, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 1228f6c96c5566c4c8020a28ec367092, type: 2}
-    - {fileID: 11400000, guid: 2e34b94dc8c6f234abffb0b012807cf5, type: 2}
+    - {fileID: 11400000, guid: d834c7a26bc10ff4e80a238ae7b00092, type: 2}
+    - {fileID: 11400000, guid: 5e9a925964b82dc43b15c7e467cfcb73, type: 2}

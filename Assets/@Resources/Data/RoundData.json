@@ -1,0 +1,52 @@
+{
+  "rounds": [
+    {
+      "round": 1,
+      "waves": [
+        {
+          "type": "Red",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "waves": [
+        {
+          "type": "Blue",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "waves": [
+        {
+          "type": "Red",
+          "count": 10
+        },
+        {
+          "type": "Blue",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "waves": [
+        {
+          "type": "Red",
+          "count": 20
+        },
+        {
+          "type": "Blue",
+          "count": 20
+        },
+        {
+          "type": "Green",
+          "count": 10
+        }
+      ]
+    }
+  ]
+}

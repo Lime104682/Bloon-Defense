@@ -36,14 +36,13 @@ using UnityEngine.UIElements;
 */
 #endregion
 
+// Side_UIDocument 스크립트
 public class GameManager : MonoBehaviour
 {
-    [SerializeField]
-    private UI_Base ui_dataSO;
-
     private bool DartButton_ishover = false;
-    
-    private Image image;
+
+    private Image towerManu_image;
+    private Image towerUpgrade_image;
     private Button start_button;
     private Button dart_button;
     private Button tack_button;
@@ -62,7 +61,8 @@ public class GameManager : MonoBehaviour
     {
         //초기화
         var root = GetComponent<UIDocument>().rootVisualElement;
-        image = root.Q<Image>("Tower-Manu");
+        towerManu_image = root.Q<Image>("Tower-Manu");
+        towerUpgrade_image = root.Q<Image>("Tower-Manu");
         start_button = root.Q<Button>("Start-Button");
         dart_button = root.Q<Button>("Dart-Button");
         tack_button = root.Q<Button>("Tack-Button");
@@ -84,13 +84,13 @@ public class GameManager : MonoBehaviour
         {
             DartButton_ishover = true;
             Debug.Log("Dart 타워 버튼 위에 마스가 올라갔습니다.");
-            image.image = Dart_Tower_texture;
+            towerManu_image.image = Dart_Tower_texture;
         });
 
         dart_button.RegisterCallback<PointerLeaveEvent>(_ =>
         {
             DartButton_ishover = false;
-            image.image = null;
+            towerManu_image.image = null;
         });
         #endregion
         #region Tack
@@ -103,13 +103,13 @@ public class GameManager : MonoBehaviour
         {
             DartButton_ishover = true;
             Debug.Log("Tack 타워 버튼 위에 마스가 올라갔습니다.");
-            image.image = Task_Tower_texture;
+            towerManu_image.image = Task_Tower_texture;
         });
 
         tack_button.RegisterCallback<PointerLeaveEvent>(_ =>
         {
             DartButton_ishover = false;
-            image.image = null; 
+            towerManu_image.image = null; 
         });
         #endregion
         #region Ice
@@ -122,13 +122,13 @@ public class GameManager : MonoBehaviour
         {
             DartButton_ishover = true;
             Debug.Log("Ice 타워 버튼 위에 마스가 올라갔습니다.");
-            image.image = Ice_Tower_texture;
+            towerManu_image.image = Ice_Tower_texture;
         });
 
         ice_button.RegisterCallback<PointerLeaveEvent>(_ =>
         {
             DartButton_ishover = false;
-            image.image = null;
+            towerManu_image.image = null;
         });
         #endregion
         #region Bomb
@@ -141,13 +141,13 @@ public class GameManager : MonoBehaviour
         {
             DartButton_ishover = true;
             Debug.Log("Bomb 타워 버튼 위에 마스가 올라갔습니다.");
-            image.image = Bomb_Tower_texture;
+            towerManu_image.image = Bomb_Tower_texture;
         });
 
         bomb_button.RegisterCallback<PointerLeaveEvent>(_ =>
         {
             DartButton_ishover = false;
-            image.image = null;
+            towerManu_image.image = null;
         });
         #endregion
         #region Super
@@ -160,32 +160,21 @@ public class GameManager : MonoBehaviour
         {
             DartButton_ishover = true;
             Debug.Log("Super 타워 버튼 위에 마스가 올라갔습니다.");
-            image.image = Super_Tower_texture;
+            towerManu_image.image = Super_Tower_texture;
         });
 
         super_button.RegisterCallback<PointerLeaveEvent>(_ =>
         {
             DartButton_ishover = false;
-            image.image = null;
+            towerManu_image.image = null;
         });
         #endregion
-    }
 
-    private void OnEnable()
-    {
-        ui_dataSO.OnNewGameChanged += OnNewGameChanged;
+        start_button.clicked += () =>
+        {
+            Debug.Log("Super-Button이 클릭되었습니다.");
+            ButtonVM.StartRoundButton();
+        };
     }
-
-    private void OnDisable()
-    {
-        ui_dataSO.OnNewGameChanged -= OnNewGameChanged;
-    }
-
-    private void OnNewGameChanged(bool isNewGame)
-    {
-        start_button.style.display =
-        isNewGame ? DisplayStyle.Flex : DisplayStyle.None;
-    }
-
 
 }
