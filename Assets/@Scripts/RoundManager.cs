@@ -56,13 +56,13 @@ public class RoundManager : MonoBehaviour
     private void OnEnable()
     {
         BloonManager.OnBloonDead += HandleBloonDead;
-        ButtonVM.OnstartRoundButton += _startRoundAction;
+        SideUITK_VM.OnstartRoundButton += _startRoundAction;
     }
 
     private void OnDisable()
     {
         BloonManager.OnBloonDead -= HandleBloonDead;
-        ButtonVM.OnstartRoundButton -= _startRoundAction;
+        SideUITK_VM.OnstartRoundButton -= _startRoundAction;
     }
 
     private void Start()
@@ -173,6 +173,7 @@ public class RoundManager : MonoBehaviour
         }
     }
 
+    //해당 라운드 종료
     private void EndRound()
     {
         Debug.Log($"Round {_currentRoundIndex + 1} 종료");

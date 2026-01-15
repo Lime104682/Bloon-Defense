@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76d6108c5de26924b9c52884f98b8654, type: 3}
-  m_Name: ButtonVM
-  m_EditorClassIdentifier: Assembly-CSharp::ButtonVM
-  _isNewGameBT: 0
-  _isStartRoundBT: 0
+  m_Script: {fileID: 11500000, guid: 075bd8d54755a5c4a8487c46d00f5239, type: 3}
+  m_Name: PopUITK_VM
+  m_EditorClassIdentifier: Assembly-CSharp::PopUITK_VM

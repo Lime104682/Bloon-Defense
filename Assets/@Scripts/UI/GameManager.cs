@@ -1,6 +1,7 @@
 using System.ComponentModel.Design.Serialization;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static UnityEngine.Rendering.DebugUI.MessageBox;
 
 #region UIKit 접근자들
 /*
@@ -173,7 +174,8 @@ public class GameManager : MonoBehaviour
         start_button.clicked += () =>
         {
             Debug.Log("Super-Button이 클릭되었습니다.");
-            ButtonVM.StartRoundButton();
+            SideUITK_VM.StartRoundButton();
+            start_button.style.display = DisplayStyle.None;
         };
     }
 

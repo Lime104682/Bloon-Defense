@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7bd59cecd9b37d341a66f7d306ba303d
+guid: a188746b28534b94ca82a75f441f92a4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4250052419016129215
-    second: Dart_Upgrade_0
+      213: 9110504250587163997
+    second: Dart_Upgrade 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dart_Upgrade_0
+      name: Dart_Upgrade 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fbafe3848283bfa30800000000000000
-      internalID: 4250052419016129215
+      spriteID: d5d2feca8530f6e70800000000000000
+      internalID: 9110504250587163997
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Dart_Upgrade_0: 4250052419016129215
+      Dart_Upgrade 1_0: 9110504250587163997
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

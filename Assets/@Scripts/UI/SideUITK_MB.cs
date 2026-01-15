@@ -18,7 +18,7 @@ public class SideUITK_MB : MonoBehaviour
         start_button.clicked += () =>
         {
             Debug.Log("Super-Button이 클릭되었습니다.");
-            ButtonVM.StartRoundButton();
+            SideUITK_VM.StartRoundButton();
         };
     }
 }

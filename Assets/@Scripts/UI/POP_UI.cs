@@ -7,9 +7,6 @@ using static UnityEngine.Rendering.DebugUI.MessageBox;
 //POP_UIDocument.prefab 스크립트
 public class POP_UI : MonoBehaviour
 {
-    [SerializeField]
-    private ButtonVM _uiButtonDataSO;
-
     private VisualElement _startVE;
     private VisualElement _clearVE;
     private VisualElement _overVE;

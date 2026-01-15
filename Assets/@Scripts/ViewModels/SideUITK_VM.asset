@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: SideUITK_VM
   m_EditorClassIdentifier: Assembly-CSharp::SideUITK_VM
   Round: 1
-  Money: 650
+  Money: 677
   Lives: 40
-  Cost: 0
-  Speed: 
-  Skill01_Price: 0
-  Skill02_Price: 0
-  Range: 0
-  Sell: 0
   Speech_Bubble: 
+  Tower_Name: Tower Name
+  Speed: Slow
+  Range: 100
+  Skill01_Price: 210
+  Skill02_Price: 100
+  Sell: 200
