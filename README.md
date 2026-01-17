@@ -29,9 +29,9 @@
 ## 2. 타워 기본 기능
 
 - [ ]  각 타워 기본 기능 구현
-    - [ ]  기본 공격
+    - [x]  기본 공격
     - [ ]  구매 기능
-    - [ ]  타워 클릭 감지
+    - [x]  타워 클릭 감지
 
 ---
 
@@ -60,7 +60,7 @@
     - [x]  웨이브 JSON 완료
         - `RoundData.json` 기반으로 풍선 타입·개수 생성
     - [ ]  풍선 Addressables 적용
-        - 현재는 `RoundManager.obj` → `RoundManager.cs`에서 드래그&드롭
+        - 현재는 `RoundManager.obj`의 `RoundManager.cs`에 드래그&드롭
     - [ ]  타워 Addressables 적용
     - [ ]  UI Addressables 적용
     - [ ]  오브젝트 풀링(Pool) 구현
